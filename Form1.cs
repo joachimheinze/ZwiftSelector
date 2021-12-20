@@ -19,6 +19,7 @@ using System.Reflection;
 /// 2021-12-18  jh base code pushed to GIT
 /// 2021-12-20  jh  clickonce integriert auf AZURE website
 /// </summary>
+/// 
 namespace ZwiftSelector
 {
     public partial class Form1 : Form
