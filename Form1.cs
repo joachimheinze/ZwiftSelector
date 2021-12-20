@@ -10,7 +10,15 @@ using System.Windows.Forms;
 using System.Xml;
 using System.IO;
 
+using System.Deployment.Application;
+using System.Reflection;
 
+
+/// <summary>
+/// selects a ZWIFT world by presetting the ZWIFT/prefs.xml
+/// 2021-12-18  jh base code pushed to GIT
+/// 2021-12-20  jh  clickonce integriert auf AZURE website
+/// </summary>
 namespace ZwiftSelector
 {
     public partial class Form1 : Form
@@ -30,9 +38,26 @@ namespace ZwiftSelector
                 setWorld(node.InnerText);
             }
 
+            AssemblyName myAssemblyName = new AssemblyName();
+            myAssemblyName.Name = "Zwift Selector (C) 2021 J. Heinze V";
+            myAssemblyName.Version = new Version("1.0.0.0");
 
 
-        } 
+
+
+            Version myVersion;
+
+            if (ApplicationDeployment.IsNetworkDeployed)
+                myVersion = ApplicationDeployment.CurrentDeployment.CurrentVersion;
+
+            else
+                myVersion = myAssemblyName.Version = new Version("1.0.0.0");
+
+            this.Text = myAssemblyName.Name + myVersion; // myAssemblyName.Version.ToString();
+
+
+
+        }
 
         private void setWorld (String wid)
         {

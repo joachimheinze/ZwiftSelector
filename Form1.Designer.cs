@@ -49,7 +49,7 @@
             "Paris"});
             this.Zwiftselection.Location = new System.Drawing.Point(119, 31);
             this.Zwiftselection.Name = "Zwiftselection";
-            this.Zwiftselection.Size = new System.Drawing.Size(232, 21);
+            this.Zwiftselection.Size = new System.Drawing.Size(275, 21);
             this.Zwiftselection.TabIndex = 0;
             this.Zwiftselection.SelectedIndexChanged += new System.EventHandler(this.Zwiftselection_SelectedIndexChanged);
             // 
@@ -76,14 +76,14 @@
             this.aktWorld.Enabled = false;
             this.aktWorld.Location = new System.Drawing.Point(119, 5);
             this.aktWorld.Name = "aktWorld";
-            this.aktWorld.Size = new System.Drawing.Size(232, 20);
+            this.aktWorld.Size = new System.Drawing.Size(275, 20);
             this.aktWorld.TabIndex = 3;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(363, 58);
+            this.ClientSize = new System.Drawing.Size(499, 63);
             this.Controls.Add(this.aktWorld);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
